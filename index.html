@@ -2,14 +2,33 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>title</title>
+    <link rel="stylesheet" href="index.css">
     <script src="./bower_components/js-md5/build/md5.min.js"></script>
   </head>
   <body>
-    <input type="password" id="password"><br>
-    <input type="number" id="digits" value="32"><br>
-    <input type="file" id="file">
-    <p id="result"></p>
+    <div class="main">
+      <h1>Palanx</h1>
+      <p id="result"></p>
+      <table>
+        <tr>
+          <td>マスターパスワード</td>
+          <td><input type="password" id="password"></td>
+        </tr>
+        <tr>
+          <td>パスワードの桁数</td>
+          <td><input type="number" id="digits" value="32"></td>
+        </tr>
+        <tr>
+          <td>画像ファイル</td>
+          <td><input type="file" id="file"></td>
+        </tr>
+      </table>
+      <div class="center">
+        <input type="button" id="generate" onclick="generate()" value="生成">
+      </div>
+    </div>
   <script>
     function mergeTypedArraysUnsafe(a, b) {
       var c = new a.constructor(a.length + b.length);
@@ -23,9 +42,10 @@
     let passwordInput = document.getElementById("password");
     let digitsInput = document.getElementById("digits");
     let fileReader = new FileReader();
-    fileInput.onchange = () => {
+
+    function generate() {
       fileReader.readAsArrayBuffer(fileInput.files[0]);
-    };
+    }
     fileReader.onload = () => {
       binary = new Uint8Array(fileReader.result)
       let pw = (new TextEncoder("utf-8").encode(passwordInput.value));

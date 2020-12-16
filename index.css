@@ -1,0 +1,42 @@
+html {
+  background-color: #fef6e4;
+}
+
+* {
+  color: #001858;
+}
+
+body {
+  padding-top: 50px;
+}
+
+td {
+  font-weight: bold;
+}
+.main {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+#password {
+  width: 150px;
+}
+#digits {
+  width: 150px;
+}
+#file {
+  width: 150px;
+}
+.center {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#generate {
+  font-weight: bold;
+}
