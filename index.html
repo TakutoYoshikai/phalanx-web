@@ -9,6 +9,7 @@
     <input type="password" id="password"><br>
     <input type="number" id="digits" value="32"><br>
     <input type="file" id="file">
+    <p id="result"></p>
   <script>
     function mergeTypedArraysUnsafe(a, b) {
       var c = new a.constructor(a.length + b.length);
@@ -32,7 +33,7 @@
       
       var hash = md5(mergeTypedArraysUnsafe(binary, pw));
       console.log(binary)
-      console.log(window.btoa(hash).slice(0, digits));
+      document.getElementById("result").innerHTML = window.btoa(hash).slice(0, digits);
 
     }
   </script>
