@@ -1,0 +1,20 @@
+{
+  "name": "phalanx-web",
+  "authors": [
+    "lucky <takuto.yoshikai@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "js-md5": "md5#^0.7.3"
+  }
+}
