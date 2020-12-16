@@ -25,12 +25,15 @@ h1 {
 
 #password {
   width: 150px;
+  height: 30px;
 }
 #digits {
   width: 150px;
+  height: 30px;
 }
 #file {
   width: 150px;
+  height: 30px;
 }
 .center {
   margin-top: 20px;
