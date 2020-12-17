@@ -21,6 +21,6 @@ fileReader.onload = () => {
   
   var hash = md5(mergeTypedArraysUnsafe(binary, pw));
   console.log(binary)
-  document.getElementById("result").innerHTML = window.btoa(hash).slice(0, digits);
+  document.getElementById("result").innerHTML = "password: " + window.btoa(hash).slice(0, digits);
 
 }
